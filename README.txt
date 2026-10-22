@@ -1,0 +1,1 @@
+Upload index.html and the assets folder to the root of a GitHub repository. Enable GitHub Pages: Settings > Pages > Deploy from a branch > main / (root). Your CV link points to assets/shahadFaisal_CV.pdf.

@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+<meta charset="utf-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+
+<title>Shahad Alghamdi — Software Engineer</title>
+
+<meta name="description" content="Portfolio of Shahad Alghamdi, Software Engineer: Flutter, Python and database projects, case studies, hackathons and training.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,300;12..96,500;12..96,800&family=Figtree:wght@400;600&display=swap" rel="stylesheet">
+
+<style>
+
+:root{--bg:#f7f3ff;--ink:#2a2144;--mut:#6b6288;--glass:rgba(255,255,255,.52);--edge:rgba(255,255,255,.85);--p:#a78bfa;--l:#d8ccff;--k:#ffb7d5;--dash:#bfb2e6;
+
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);color-scheme:light}
+
+html{scroll-padding-top:calc(env(safe-area-inset-top,0px) + 76px);scroll-behavior:smooth}
+
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#1d1730;--ink:#f1ebff;--mut:#b6abd6;--glass:rgba(60,48,98,.5);--edge:rgba(255,255,255,.18);--dash:#5b4d8a;color-scheme:dark}}
+
+*{box-sizing:border-box}
+
+body{margin:0;background:var(--bg);color:var(--ink);font:400 15px/1.6 Figtree,system-ui,sans-serif;overflow-x:hidden}
+
+h1,h2,h3{font-family:'Bricolage Grotesque',Georgia,serif;margin:0;line-height:1}
+
+.bg{position:fixed;inset:0;z-index:-1;background:radial-gradient(40vw 40vw at calc(var(--mx,.5)*100%) calc(var(--my,.3)*100%),rgba(255,183,213,.55),transparent 70%),linear-gradient(120deg,var(--bg),#efe6ff,#ffe9f3,var(--bg));background-size:100% 100%,300% 300%;animation:shift 18s ease infinite}
+
+@keyframes shift{50%{background-position:0 0,100% 50%}}
+
+.orb{position:fixed;z-index:-1;border-radius:50%;filter:blur(60px);opacity:.55;will-change:transform}
+
+.o1{width:38vw;height:38vw;left:-8vw;top:30vh;background:var(--l)}.o2{width:30vw;height:30vw;right:-6vw;top:90vh;background:var(--k)}
+
+nav{position:fixed;top:calc(env(safe-area-inset-top,0px) + 12px);left:50%;transform:translateX(-50%);z-index:20;display:flex;gap:4px;padding:6px;border-radius:99px;background:var(--glass);backdrop-filter:blur(18px);border:1px solid var(--edge);max-width:94vw;overflow-x:auto}
+
+nav a{color:var(--ink);text-decoration:none;font-size:13px;padding:6px 12px;border-radius:99px;white-space:nowrap;transition:*background* .25s,transform .25s}
+
+nav a:hover,nav a:focus-visible{background:var(--l);transform:translateY(-2px)}
+
+a:focus-visible,button:focus-visible{outline:3px solid var(--p);outline-offset:2px}
+
+section{padding:110px max(6vw,20px) 40px;max-width:1200px;margin:auto}
+
+h2{font-size:clamp(30px,5vw,60px);font-weight:800;letter-spacing:-.03em;margin-bottom:36px}
+
+.hero{min-height:100svh;display:grid;align-items:center;position:relative}
+
+.hero h1{font-size:clamp(42px,8vw,108px);font-weight:800;letter-spacing:-.045em;position:relative;z-index:2}
+
+.hero h1 span{display:block;background:linear-gradient(90deg,#7c5cf0,#ff8fbf);-webkit-background-clip:text;background-clip:text;color:transparent}
+
+.hero p{max-width:30ch;font-size:clamp(15px,1.7vw,19px);color:var(--mut);position:relative;z-index:2}
+
+#gl{position:absolute;right:-4vw;top:8vh;width:min(62vw,640px);height:min(62vw,640px);z-index:1}
+
+.btns{display:flex;gap:12px;flex-wrap:wrap;position:relative;z-index:2}
+
+.btn{display:inline-block;padding:11px 20px;font-size:14px;border-radius:99px;text-decoration:none;font-weight:600;color:var(--ink);background:var(--glass);border:1px solid var(--edge);backdrop-filter:blur(14px);position:relative;overflow:hidden;transition:transform .3s,box-shadow .3s}
+
+.btn.main{background:linear-gradient(135deg,#a78bfa,#ff9cc7);color:#fff}
+
+.btn:hover{transform:translateY(-3px) scale(1.03);box-shadow:0 14px 30px -10px #a78bfa}
+
+.btn[aria-disabled=true]{opacity:.55;cursor:not-allowed}
+
+.scroll{position:absolute;bottom:28px;left:max(6vw,20px);width:26px;height:44px;border:2px solid var(--p);border-radius:20px}
+
+.scroll::after{content:"";position:absolute;left:9px;top:8px;width:4px;height:8px;border-radius:4px;background:var(--p);animation:dot 1.6s infinite}
+
+@keyframes dot{70%{transform:translateY(16px);opacity:0}}
+
+.grid{display:grid;gap:18px;grid-template-columns:repeat(auto-fit,minmax(260px,1fr))}
+
+.card{background:var(--glass);border:1px solid var(--edge);border-radius:28px;padding:26px;backdrop-filter:blur(16px);box-shadow:0 20px 50px -30px #7c5cf0,inset 0 1px 0 var(--edge);transform-style:preserve-3d;transition:transform .2s,box-shadow .3s;position:relative;overflow:hidden}
+
+.card::before{content:"";position:absolute;inset:0;background:radial-gradient(260px circle at var(--gx,50%) var(--gy,0),rgba(255,255,255,.7),transparent 60%);opacity:0;transition:opacity .3s;pointer-events:none}
+
+.card:hover::before{opacity:.7}
+
+.card h3{font-size:20px;margin-bottom:8px}
+
+.card p{color:var(--mut);margin:0 0 12px}
+
+.tag{display:inline-block;font-size:12px;padding:3px 10px;margin:0 6px 6px 0;border-radius:99px;background:var(--l);color:#3b2a78}
+
+.stat{font:800 clamp(34px,4.5vw,52px)/1 'Bricolage Grotesque',serif;letter-spacing:-.03em}
+
+.proj{cursor:pointer;text-decoration:none;color:inherit;display:block}
+
+.proj .tl{font-size:12px;color:var(--p);font-weight:600}
+
+.proj:hover h3{letter-spacing:.01em}
+
+.tabs{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:18px}
+
+.tabs button{font:inherit;padding:8px 18px;border-radius:99px;border:1px solid var(--edge);background:var(--glass);color:var(--ink);cursor:pointer;transition:.25s}
+
+.tabs button[aria-selected=true]{background:linear-gradient(135deg,#a78bfa,#ff9cc7);color:#fff;transform:scale(1.05)}
+
+.line{position:relative;padding-left:34px;border-left:2px solid var(--l)}
+
+.line .card::after{content:"";position:absolute;left:-43px;top:34px;width:14px;height:14px;border-radius:50%;background:var(--p);box-shadow:0 0 0 6px var(--l)}
+
+.line .card{overflow:visible}
+
+ul.pl{padding-left:20px;margin:0;color:var(--mut)}
+
+.badge{font-size:12px;padding:2px 10px;border-radius:99px;border:1px dashed var(--p);color:var(--p);margin-left:6px;vertical-align:middle}
+
+.ph{border:2px dashed var(--dash);border-radius:18px;padding:16px;color:var(--mut);font-size:13px}
+
+#case{position:fixed;inset:0;z-index:30;overflow:auto;background:var(--bg);padding:calc(env(safe-area-inset-top,0px) + 24px) max(6vw,20px) 60px;clip-path:circle(0 at 50% 50%);visibility:hidden;transition:clip-path .7s cubic-bezier(.7,0,.2,1),visibility 0s .7s}
+
+#case.on{clip-path:circle(150% at 50% 50%);visibility:visible;transition:clip-path .7s cubic-bezier(.7,0,.2,1)}
+
+#case .in{max-width:900px;margin:auto}
+
+#case h2{font-size:clamp(30px,5vw,56px);margin:20px 0}
+
+#case h3{font-size:19px;margin:30px 0 10px}
+
+.gal{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:12px}
+
+.gal .ph{aspect-ratio:9/16;display:grid;place-items:center;text-align:center}
+
+.rv{opacity:0;transform:translateY(34px);transition:opacity .8s,transform .8s cubic-bezier(.2,.7,.2,1)}
+
+.rv.in{opacity:1;transform:none}
+
+footer{padding:50px 20px 70px;text-align:center;color:var(--mut)}
+
+.more{max-height:0;opacity:0;overflow:hidden;transition:max-height .45s ease,opacity .35s ease,margin .3s;font-size:13px;color:var(--mut)}
+
+.more ul{margin:0;padding-left:18px}.more b{color:var(--ink)}
+
+.card:hover .more,.card:focus-within .more{max-height:340px;opacity:1;margin-top:10px}
+
+.card:hover,.card:focus-within{z-index:5;box-shadow:0 30px 60px -24px #7c5cf0,inset 0 1px 0 var(--edge)}
+
+.card.rv.in{transition:opacity .8s,transform .25s,box-shadow .3s}
+
+.grid.top{align-items:start}
+
+@media(hover:none){.more{max-height:none;opacity:1;margin-top:10px}}
+
+@media(max-width:700px){#gl{opacity:.55;top:0}.hero p{max-width:22ch}}
+
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}.rv{opacity:1;transform:none}}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="bg" aria-hidden="true"></div><div class="orb o1" aria-hidden="true"></div><div class="orb o2" aria-hidden="true"></div>
+
+<nav aria-label="Main"><a href="#home">Home</a><a href="#about">About</a><a href="#projects">Projects</a><a href="#skills">Skills</a><a href="#experience">Experience</a><a href="#achievements">Hackathons</a><a href="#certifications">Certificates</a><a href="#contact">Contact</a></nav>
+
+<main>
+
+<section class="hero" id="home">
+
+ <canvas id="gl" aria-hidden="true"></canvas>
+
+ <div><h1>Shahad<span>Alghamdi</span></h1><p>Software Engineer building digital solutions through code, design and problem-solving.</p><br>
+
+ <div class="btns"><a class="btn main" href="#projects">View My Work</a><a class="btn" id="cv" href="#contact">Download CV</a></div></div>
+
+ <div class="scroll" aria-hidden="true"></div>
+
+</section>
+
+<section id="about"><h2 class="rv">About</h2><div class="grid">
+
+ <div class="card rv"><p>Education</p><h3>BSc Software Engineering</h3><p>University of Jeddah, 2026</p></div>
+
+ <div class="card rv"><p>GPA</p><div class="stat">4.83<small style="font-size:.4em">/5</small></div></div>
+
+ <div class="card rv"><p>Interests</p><h3>Software Development &amp; IT</h3></div>
+
+ <div class="card rv"><p>Hands-on with</p><span class="tag">Application development</span><span class="tag">Database integration</span><span class="tag">Software testing</span></div></div></section>
+
+<section id="projects"><h2 class="rv">Projects</h2><div class="grid top" id="pg"></div></section>
+
+<section id="skills"><h2 class="rv">Skills</h2><div class="tabs" role="tablist" id="tabs"></div><div class="grid" id="sk" role="tabpanel"></div></section>
+
+<section id="experience"><h2 class="rv">Experience</h2><div class="line"><div class="card rv"><h3>Bank AlJazira</h3><p>Summer Training, Jun–Aug 2025</p>
+
+<ul class="pl"><li>Microsoft Dynamics 365 CRM: entity configuration and business rules</li><li>JavaScript-based functionality</li><li>IBM Business Automation Workflow: process workflows, forms and approvals</li><li>Software test case execution</li><li>Exposure to enterprise IT applications</li></ul></div></div></section>
+
+<section id="achievements"><h2 class="rv">Hackathons</h2><div class="grid top" id="ach"></div></section>
+
+<section id="certifications"><h2 class="rv">Certifications</h2><div class="grid" id="cert"></div></section>
+
+<section id="contact"><h2 class="rv">Let’s talk</h2><div class="card rv"><p>Open to Software Engineering and IT roles.</p><div class="btns" id="cb"></div></div></section>
+
+</main>
+
+<footer>© 2026 Shahad Alghamdi</footer>
+
+<div id="case" role="dialog" aria-modal="true" aria-label="Project case study"><div class="in" id="ci"></div></div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+
+<script>
+
+/* ===== EDIT YOUR CONTENT HERE ===== */
+
+const LINKS={cv:"assets/shahadFaisal_CV.pdf",email:"shahadfaisal00@gmail.com",linkedin:"http://www.linkedin.com/in/shahad-faisal-1872b5340",github:"https://github.com/Shahadfaisal"}; // cv: add your CV file URL
+
+const PROJECTS=[
+
+ {id:"taabat",name:"Taabat",type:"Graduation Project",sum:"AI-powered smart farming app that classifies fruit, detects ripeness and predicts yield.",roles:["Developed Python scripts for image dataset cleaning and preprocessing for AI fruit classification","Designed and implemented Flutter frontend screens","Built and integrated the Supabase database with the app"],tech:["Python","Flutter","Dart","Supabase"],github:"https://github.com/DanaAlmoraie/TabaatApp",figma:"https://www.figma.com/design/ce2Rlgu3Ze2vhzB5KV2qgS/Taabat-app?node-id=0-1&t=1hHdWf4dzP1KXTgZ-1",
+
+  overview:"Taabat is an AI-powered smart farming mobile app aligned with Saudi Vision 2030. It classifies fruits and date varieties, detects ripeness stages and predicts crop yield from environmental data, for farmers, shoppers and small-scale sellers. Graduation project at the University of Jeddah by a team of five, supervised by Dr. Fatmah Assiri.",
+
+  problem:"Agricultural losses, limited transparency between farmers and shoppers, and a need for data-driven farming decisions.",
+
+  solution:"A mobile app with AI models for fruit and date classification, ripeness detection and yield prediction, plus farm management and reminders.",
+
+  process:"Scrum in five sprints tracked in Jira. Team stack: Flutter app, FastAPI backend, Supabase for database and authentication, and a YOLOv8n model deployed with TensorFlow Lite. Team-reported model accuracy: fruit classifier 0.92, date classifier 0.77, Medjool ripeness 0.98.",
+
+  challenges:"No ripening datasets exist for dates, so yield prediction was limited to fruit types with weather-linked datasets."},
+
+ {id:"kidcoin",name:"KidCoin",type:"Budget Management App",sum:"Space-themed Android app teaching children aged 9–14 to save, budget and spend wisely.",roles:["Developed Flutter frontend interfaces","Contributed to backend functionality"],tech:["Flutter"],github:"https://github.com/deemaoaloufi/KidCoin_App.git",
+
+  overview:"KidCoin is an Android app for children aged 9–14 that teaches saving, budgeting and smart spending through games and a space-themed experience. Parents monitor progress and set reward goals. Built by a team of six for the Software Process Models course (2024–2025).",
+
+  problem:"Children often lack financial literacy, and many families struggle to teach money management.",
+
+  solution:"An interactive app with activities, games and real-life simulations. Children track spending and receive budget tips; parents add children, set rewards and view progress reports.",
+
+  process:"Agile sprints managed in Jira, with Slack for communication, GitHub for code, Figma for interfaces and Lucidchart for the use case and class diagrams."},
+
+ {id:"trackify",name:"Trackify",type:"Mobile Application",sum:"Route, maintenance and speed assistant for truck drivers in Saudi Arabia.",roles:["Developed application interfaces","Integrated Firebase authentication and database","Scrum Master and pair programmer on the map and routing work (OSMDroid, OSRM API)"],tech:["Java","XML","Firebase","OSMDroid","OSRM API","OpenStreetMap","Android Studio"],github:"https://github.com/DanaAlmoraie/Trackify",
+
+  overview:"Trackify is an Android app for truck drivers and fleet operations. Drivers register and log in, enter a start and end point, and get the best route with live speed, remaining distance and estimated arrival time, plus a maintenance page for oil, tires and brakes. Built for CCSW 431 Mobile Programming at the University of Jeddah by a team of three.",
+
+  problem:"Drivers struggle to follow the assigned route, forget required maintenance and find it hard to keep a safe speed, which raises the chance of delays and vehicle issues.",
+
+  solution:"Firebase sign-up and login, route entry with the best path drawn on an OpenStreetMap map (OSMDroid with the OSRM routing API), live speed, remaining distance and time, and a maintenance dashboard showing remaining kilometres and days before oil, tire and brake service.",
+
+  process:"Three Scrum sprints with stand-up meetings, rotating Scrum Master and client roles and pair programming: (1) registration and login, (2) route entry and map display, (3) maintenance status. Each sprint had written test cases covering registration, login, routing and maintenance, all recorded as passed.",
+
+  challenges:"Firebase needed troubleshooting before it linked to the app; the OSRM API initially refused requests until coordinate formatting was fixed; and a Firebase date-format mismatch had to be resolved for the maintenance calculations."},
+
+ {id:"furtails",name:"FurTails",type:"Pet Care Website",sum:"One place for pet owners: grooming, personalised meals and pet profiles.",roles:["Developed frontend pages","Integrated APIs to support website functionality"],tech:["HTML","CSS","JavaScript","API Integration"],github:"https://github.com/Joudj7tam/FURTAILS.git",
+
+  overview:"FurTails brings grooming services, personalised feeding plans and custom pet profiles into one website for cat and dog owners. Built by a team of three.",
+
+  problem:"Pet owners juggle separate services for grooming, meals and keeping track of their pets’ care.",
+
+  solution:"Professional grooming packages, meal preparation services, multi-pet profile management and a care history tracker.",
+
+  process:"Frontend in HTML, CSS and JavaScript; backend with Node.js and Express.js; MongoDB with Mongoose; email-based authentication; API routes tested with Thunder Client."},
+
+ {id:"vitafit",name:"VitaFit",type:"Health & Lifestyle App",proto:true,sum:"Design prototype of a one-stop health and fitness platform.",roles:["Designed UI prototypes using Figma","Contributed to requirements analysis and the Architecture Specification Report (ASR)"],tech:["Figma","UX research"],demo:"https://www.figma.com/design/wnASKB85fc4RUHV6cNjDUo/VitaFit?node-id=0%3A1&t=U881TcJaSLZuoOPp-1",
+
+  overview:"VitaFit is a design prototype of a one-stop platform for health and fitness: a nursery for children, healthy meal ordering, professional support and workout programs. It is a Figma prototype, not a built application. Team of five.",
+
+  problem:"From 100+ survey responses: 72% of respondents lacked the experience to calculate their calorie needs, and users reported difficulty organising healthy meals and finding childcare while exercising.",
+
+  solution:"Reliable trainers and nutrition experts, healthy meal delivery, a certified nursery, and workout plans users can choose or customise.",
+
+  process:"Interviews and a questionnaire, then needs, insights and tasks, low-fidelity sketches and a high-fidelity Figma prototype."},
+
+ {id:"rayready",name:"RayReady",type:"IoT Project",sum:"Wearable that alerts caregivers when heat or UV is unsafe for children with sensitive skin.",roles:[],tech:["NodeMCU ESP8266","Arduino IDE","ThingSpeak","IFTTT"],
+
+  overview:"RayReady is a child safety wristband built from a NodeMCU (ESP8266), a DHT11 temperature sensor, a UV sensor, a GPS module and a red LED. A working hardware prototype was built.",
+
+  problem:"Children with conditions such as eczema, vitiligo or albinism are vulnerable to UV and heat, and guardians may not notice in time.",
+
+  solution:"Sends an SMS alert with the child’s location when temperature exceeds 30°C or the UV index goes above 3, lights a red LED, and logs readings to the cloud.",
+
+  process:"Programmed in the Arduino IDE; readings stored and visualised on ThingSpeak; SMS alerts automated through IFTTT. Future ideas: heart rate sensor, waterproofing, solar charging and an activity tracker."}
+
+];
+
+const SKILLS={Programming:["Python","Java","JavaScript","Dart"],"Mobile & Frontend":["Flutter","HTML","CSS"],"Backend & Database":["MySQL","Firebase","MongoDB","Supabase"],"Data Processing":["Data Cleaning","Image Preprocessing"],"Tools & Technologies":["Git","GitHub","JUnit","Figma","API Integration"]};
+
+const ACH=[
+
+ {n:"Raqeem",e:"Heritage Innovation Hackathon, Jun 2026",s:"2nd Place",b:"",d:["AI-powered heritage platform concept to document and translate Saudi archaeological inscriptions","Built around a unified national database for research and public participation","I conducted market and competitor analysis"]},
+
+ {n:"MindTalker",e:"Global OSH Hackathon, Feb–Mar 2025",s:"AI workplace communication assistant",b:"Prototype",d:["Proposed an AI-powered assistant to improve workplace communication in high-stress situations"]},
+
+ {n:"Baseer",e:"Launchpad Bootcamp Hackathon, Sep 2024",s:"Top 15",b:"Concept",d:["Smart security solution using AI for identity verification and remote access"]},
+
+ {n:"Guider",e:"Boussala Hackathon, 2024",s:"AI-powered tourism application",b:"Concept",d:["Smart tour guide for Red Sea visitors with interactive maps","Hotel, restaurant, car and activity booking","Personalised AI recommendations and responsible-tourism guidance"]}];
+
+const CERT=[["Artificial Intelligence Fundamentals","IBM SkillsBuild","2026"],["UX/UI","Satr, Tuwaiq Academy","2026"],["Build Native Mobile Apps with Flutter","Udacity","2025"],["Overview of IoT Technologies","Huawei CRA Training Program","2024"]];
+
+/* ================================== */
+
+const $=s=>document.querySelector(s),RM=matchMedia('(prefers-reduced-motion:reduce)').matches;
+
+const link=(u,t,c='btn')=>u?`<a class="${c}" href="${u}" target="_blank" rel="noopener">${t}</a>`:`<a class="${c}" aria-disabled="true" title="Add this link in the LINKS settings">${t}</a>`;
+
+$('#pg').innerHTML=PROJECTS.map(p=>`<a class="card proj rv" href="#${p.id}"><span class="tl">${p.type}${p.proto?'<span class="badge">Design prototype</span>':''}</span><h3>${p.name}</h3><p>${p.sum}</p>${p.tech.slice(0,3).map(t=>`<span class="tag">${t}</span>`).join('')}<div class="more">${p.roles.length?`<b>My contributions</b><ul>${p.roles.map(r=>`<li>${r}</li>`).join('')}</ul>`:''}<p style="margin:8px 0 0;color:var(--p);font-weight:600">Open case study</p></div></a>`).join('');
+
+$('#ach').innerHTML=ACH.map(a=>`<div class="card rv" tabindex="0"><h3>${a.n}${a.b?`<span class="badge">${a.b}</span>`:''}</h3><p>${a.e}</p><span class="tag">${a.s}</span><div class="more"><ul>${a.d.map(x=>`<li>${x}</li>`).join('')}</ul></div></div>`).join('');
+
+$('#cert').innerHTML=CERT.map(c=>`<div class="card rv"><h3 style="font-size:21px">${c[0]}</h3><p>${c[1]}</p><span class="tag">${c[2]}</span></div>`).join('');
+
+$('#cb').innerHTML=link(LINKS.email&&'mailto:'+LINKS.email,'Email me','btn main')+link(LINKS.linkedin,'LinkedIn')+link(LINKS.github,'GitHub')+link(LINKS.cv,'Download resume');
+
+if(LINKS.cv){const c=$('#cv');c.href=LINKS.cv;c.target='_blank'}else{$('#cv').setAttribute('aria-disabled','true');$('#cv').title='Add your CV link in LINKS'}
+
+// skills tabs
+
+const tabs=$('#tabs');let cur=Object.keys(SKILLS)[0];
+
+function drawSk(){tabs.innerHTML=Object.keys(SKILLS).map(k=>`<button role="tab" aria-selected="${k==cur}" data-k="${k}">${k}</button>`).join('');
+
+$('#sk').innerHTML=SKILLS[cur].map(s=>`<div class="card"><h3 style="font-size:22px">${s}</h3></div>`).join('');bindTilt()}
+
+tabs.onclick=e=>{if(e.target.dataset.k){cur=e.target.dataset.k;drawSk();tabs.querySelector('[aria-selected=true]').focus()}};
+
+// case study view
+
+const cs=$('#case');
+
+function route(){const id=location.hash.slice(1),p=PROJECTS.find(x=>x.id==id);
+
+ if(p){const S=(t,c)=>c?`<h3>${t}</h3>${c}`:'',F=v=>v?`<p>${v}</p>`:'',bt=[p.github&&link(p.github,'GitHub repository'),p.figma&&link(p.figma,'Figma design'),p.demo&&link(p.demo,'Figma prototype')].filter(Boolean).join('');
+
+ $('#ci').innerHTML=`<a class="btn" href="#projects">Back to projects</a><h2>${p.name}</h2><p>${p.type}${p.proto?' <span class="badge">Design prototype, not a built application</span>':''}</p>${S('Project overview',F(p.overview))}${S('Problem statement',F(p.problem))}${S('Proposed solution',F(p.solution))}${S('My role &amp; contributions',p.roles.length?`<ul class="pl">${p.roles.map(r=>`<li>${r}</li>`).join('')}</ul>`:'')}${S('Technologies used',p.tech.map(t=>`<span class="tag">${t}</span>`).join(''))}${S('Development process',F(p.process))}${S('Challenges &amp; solutions',F(p.challenges))}${bt?`<div class="btns" style="margin-top:30px">${bt}</div>`:''}`;
+
+ cs.classList.add('on');cs.scrollTop=0;document.title=p.name+' — Shahad Alghamdi';cs.querySelector('a').focus({preventScroll:true})}
+
+ else{cs.classList.remove('on');document.title='Shahad Alghamdi — Software Engineer'}}
+
+addEventListener('hashchange',route);
+
+// reveal
+
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.12});
+
+function observe(){document.querySelectorAll('.rv:not(.in)').forEach(n=>RM?n.classList.add('in'):io.observe(n))}
+
+// tilt + light
+
+function bindTilt(){if(RM)return;document.querySelectorAll('.card').forEach(c=>{if(c._t)return;c._t=1;
+
+ c.addEventListener('pointermove',e=>{const r=c.getBoundingClientRect(),x=(e.clientX-r.left)/r.width,y=(e.clientY-r.top)/r.height;c.style.transform=`perspective(800px) rotateY(${(x-.5)*8}deg) rotateX(${(.5-y)*8}deg) scale(1.04)`;c.style.setProperty('--gx',x*100+'%');c.style.setProperty('--gy',y*100+'%')});
+
+ c.addEventListener('pointerleave',()=>c.style.transform='')})}
+
+let mx=0,my=0;
+
+addEventListener('pointermove',e=>{mx=e.clientX/innerWidth*2-1;my=e.clientY/innerHeight*2-1;document.body.style.setProperty('--mx',(mx+1)/2);document.body.style.setProperty('--my',(my+1)/2);document.querySelector('.bg').style.setProperty('--mx',(mx+1)/2);document.querySelector('.bg').style.setProperty('--my',(my+1)/2)});
+
+// parallax
+
+const o1=$('.o1'),o2=$('.o2');
+
+if(!RM)addEventListener('scroll',()=>{const y=scrollY;o1.style.transform=`translateY(${y*-.12}px)`;o2.style.transform=`translateY(${y*-.25}px)`},{passive:true});
+
+// 3D hero
+
+(function(){const cv=$('#gl');try{
+
+ const R=new THREE.WebGLRenderer({canvas:cv,alpha:true,antialias:true});R.setPixelRatio(Math.min(devicePixelRatio,2));
+
+ const S=new THREE.Scene(),C=new THREE.PerspectiveCamera(40,1,.1,50);C.position.z=4.2;
+
+ const g=new THREE.SphereGeometry(1.15,96,96),base=g.attributes.position.array.slice();
+
+ const m=new THREE.MeshPhysicalMaterial({color:0xc9b6ff,metalness:.25,roughness:.12,clearcoat:1,clearcoatRoughness:.05,emissive:0x3a2a7a,emissiveIntensity:.25});
+
+ const b=new THREE.Mesh(g,m);S.add(b);
+
+ const ring=new THREE.Mesh(new THREE.TorusGeometry(1.75,.035,24,200),new THREE.MeshPhysicalMaterial({color:0xffb7d5,roughness:.1,clearcoat:1}));ring.rotation.x=1.2;S.add(ring);
+
+ S.add(new THREE.AmbientLight(0xffffff,.65));
+
+ const L1=new THREE.PointLight(0xff9cc7,2.2,20);L1.position.set(3,2,4);const L2=new THREE.PointLight(0x8f7bff,2,20);L2.position.set(-3,-2,3);const L3=new THREE.PointLight(0xffffff,1.6,20);S.add(L1,L2,L3);
+
+ function size(){const w=cv.clientWidth,h=cv.clientHeight;R.setSize(w,h,false);C.aspect=w/h;C.updateProjectionMatrix()}size();addEventListener('resize',size);
+
+ let vis=true;new IntersectionObserver(e=>vis=e[0].isIntersecting).observe(cv);
+
+ const p=g.attributes.position,n=p.count;
+
+ function frame(t){t*=.001;if(RM)t=0;
+
+  for(let i=0;i<n;i++){const x=base[i*3],y=base[i*3+1],z=base[i*3+2],d=1+.13*(Math.sin(x*2.1+t*1.1)+Math.sin(y*2.4+t*1.4)+Math.sin(z*1.9+t*.9))/3*2;p.setXYZ(i,x*d,y*d,z*d)}
+
+  p.needsUpdate=true;g.computeVertexNormals();
+
+  b.rotation.y=t*.25+mx*.4;b.rotation.x=my*.3;ring.rotation.z=t*.3;ring.rotation.y=mx*.3;
+
+  L3.position.set(mx*4,-my*3,3);R.render(S,C)}
+
+ if(RM)frame(0);else(function loop(t){requestAnimationFrame(loop);if(vis&&!document.hidden)frame(t)})(0);
+
+}catch(e){cv.style.cssText+=';background:radial-gradient(circle at 40% 35%,#fff,#c9b6ff 45%,#ff9cc7);border-radius:50%;opacity:.7'}})();
+
+drawSk();observe();route();
+
+</script>
+
+</body>
+
+</html>
