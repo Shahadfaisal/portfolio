@@ -1,24 +1,24 @@
 /* ===== EDIT YOUR CONTENT HERE ===== */
 const LINKS={cv:"assets/shahadFaisal_CV.pdf",email:"shahadfaisal00@gmail.com",linkedin:"http://www.linkedin.com/in/shahad-faisal-1872b5340",github:"https://github.com/Shahadfaisal"}; // cv: add your CV file URL
 const PROJECTS=[
- {id:"taabat",c:"#9be3b5",logo:"assets/images/taabat/logo.png",logoBg:"#ffffff",shots:["assets/images/taabat/1.png","assets/images/taabat/2.png","assets/images/taabat/3.png"],ratio:"546/1080",name:"Taabat",type:"Graduation Project",sum:"AI-powered smart farming app that classifies fruit, detects ripeness and predicts yield.",roles:["Developed Python scripts for image dataset cleaning and preprocessing for AI fruit classification","Designed and implemented Flutter frontend screens","Built and integrated the Supabase database with the app"],tech:["Python","Flutter","Dart","Supabase"],github:"https://github.com/DanaAlmoraie/TabaatApp",figma:"https://www.figma.com/design/ce2Rlgu3Ze2vhzB5KV2qgS/Taabat-app?node-id=0-1&t=1hHdWf4dzP1KXTgZ-1",
+ {id:"taabat",c:"#9be3b5",logo:"assets/images/taabat/logo.png",logoBg:"#ffffff",shots:["assets/images/taabat/1.png","assets/images/taabat/2.png","assets/images/taabat/3.png"],ratio:"546/1080",name:"Taabat",type:"Graduation Project",sum:"AI-powered smart farming app that classifies fruit, detects ripeness and predicts yield.",roles:["Developed Python scripts for image dataset cleaning and preprocessing for AI fruit classification","Designed and implemented Flutter frontend screens","Built and integrated the Supabase database with the app"],tech:["Python","Flutter (Dart)","Supabase","YOLOv8","EfficientNet-B1","EfficientNet-B0","TensorFlow Lite","FastAPI","GitHub","Postman","Pytest"],github:"https://github.com/DanaAlmoraie/TabaatApp",figma:"https://www.figma.com/design/ce2Rlgu3Ze2vhzB5KV2qgS/Taabat-app?node-id=0-1&t=1hHdWf4dzP1KXTgZ-1",
   overview:"Taabat is an AI-powered smart farming mobile app aligned with Saudi Vision 2030. It classifies fruits and date varieties, detects ripeness stages and predicts crop yield from environmental data, for farmers, shoppers and small-scale sellers. Graduation project at the University of Jeddah by a team of five, supervised by Dr. Fatmah Assiri.",
   problem:"Agricultural losses, limited transparency between farmers and shoppers, and a need for data-driven farming decisions.",
   solution:"A mobile app with AI models for fruit and date classification, ripeness detection and yield prediction, plus farm management and reminders.",
   process:"Scrum in five sprints tracked in Jira. Team stack: Flutter app, FastAPI backend, Supabase for database and authentication, and a YOLOv8n model deployed with TensorFlow Lite. Team-reported model accuracy: fruit classifier 0.92, date classifier 0.77, Medjool ripeness 0.98.",
   challenges:"No ripening datasets exist for dates, so yield prediction was limited to fruit types with weather-linked datasets."},
- {id:"kidcoin",c:"#9db4ff",logo:"assets/images/kidcoin/logo.png",logoBg:"#ffffff",shots:["assets/images/kidcoin/1.png","assets/images/kidcoin/2.png","assets/images/kidcoin/3.png"],ratio:"528/1068",name:"KidCoin",type:"Budget Management App",sum:"Space-themed Android app teaching children aged 9–14 to save, budget and spend wisely.",roles:["Developed Flutter frontend interfaces","Contributed to backend functionality"],tech:["Flutter"],github:"https://github.com/deemaoaloufi/KidCoin_App.git",
+ {id:"kidcoin",c:"#9db4ff",logo:"assets/images/kidcoin/logo.png",logoBg:"#ffffff",shots:["assets/images/kidcoin/1.png","assets/images/kidcoin/2.png","assets/images/kidcoin/3.png"],ratio:"528/1068",name:"KidCoin",type:"Budget Management App",sum:"Space-themed Android app teaching children aged 9–14 to save, budget and spend wisely.",roles:["Developed Flutter frontend interfaces","Contributed to backend functionality"],tech:["Flutter","Slack","Jira"],github:"https://github.com/deemaoaloufi/KidCoin_App.git",
   overview:"KidCoin is an Android app for children aged 9–14 that teaches saving, budgeting and smart spending through games and a space-themed experience. Parents monitor progress and set reward goals. Built by a team of six for the Software Process Models course (2024–2025).",
   problem:"Children often lack financial literacy, and many families struggle to teach money management.",
   solution:"An interactive app with activities, games and real-life simulations. Children track spending and receive budget tips; parents add children, set rewards and view progress reports.",
   process:"Agile sprints managed in Jira, with Slack for communication, GitHub for code, Figma for interfaces and Lucidchart for the use case and class diagrams."},
- {id:"trackify",c:"#ffbe8a",logo:"assets/images/trackify/logo.png",logoBg:"#e8702a",shots:["assets/images/trackify/1.png","assets/images/trackify/2.png","assets/images/trackify/3.png"],ratio:"510/1080",name:"Trackify",type:"Mobile Application",sum:"Route, maintenance and speed assistant for truck drivers in Saudi Arabia.",roles:["Developed application interfaces","Integrated Firebase authentication and database","Scrum Master and pair programmer on the map and routing work (OSMDroid, OSRM API)"],tech:["Java","XML","Firebase","OSMDroid","OSRM API","OpenStreetMap","Android Studio"],github:"https://github.com/DanaAlmoraie/Trackify",
+ {id:"trackify",c:"#ffbe8a",logo:"assets/images/trackify/logo.png",logoBg:"#e8702a",shots:["assets/images/trackify/1.png","assets/images/trackify/2.png","assets/images/trackify/3.png"],ratio:"510/1080",name:"Trackify",type:"Mobile Application",sum:"Route, maintenance and speed assistant for truck drivers in Saudi Arabia.",roles:["Developed application interfaces","Integrated Firebase authentication and database","Scrum Master and pair programmer on the map and routing work (OSMDroid, OSRM API)"],tech:["Java","XML","Firebase","OSMDroid","OSRM API","OpenStreetMap","Android Studio IDE","API Integration"],github:"https://github.com/DanaAlmoraie/Trackify",
   overview:"Trackify is an Android app for truck drivers and fleet operations. Drivers register and log in, enter a start and end point, and get the best route with live speed, remaining distance and estimated arrival time, plus a maintenance page for oil, tires and brakes. Built for CCSW 431 Mobile Programming at the University of Jeddah by a team of three.",
   problem:"Drivers struggle to follow the assigned route, forget required maintenance and find it hard to keep a safe speed, which raises the chance of delays and vehicle issues.",
   solution:"Firebase sign-up and login, route entry with the best path drawn on an OpenStreetMap map (OSMDroid with the OSRM routing API), live speed, remaining distance and time, and a maintenance dashboard showing remaining kilometres and days before oil, tire and brake service.",
   process:"Three Scrum sprints with stand-up meetings, rotating Scrum Master and client roles and pair programming: (1) registration and login, (2) route entry and map display, (3) maintenance status. Each sprint had written test cases covering registration, login, routing and maintenance, all recorded as passed.",
   challenges:"Firebase needed troubleshooting before it linked to the app; the OSRM API initially refused requests until coordinate formatting was fixed; and a Firebase date-format mismatch had to be resolved for the maintenance calculations."},
- {id:"furtails",c:"#ffb3a7",logo:"assets/images/furtails/logo.png",logoBg:"#ffffff",shots:["assets/images/furtails/1.png","assets/images/furtails/2.png","assets/images/furtails/3.png"],ratio:"1400/788",name:"FurTails",type:"Pet Care Website",sum:"One place for pet owners: grooming, personalised meals and pet profiles.",roles:["Developed frontend pages","Integrated APIs to support website functionality"],tech:["HTML","CSS","JavaScript","API Integration"],github:"https://github.com/Joudj7tam/FURTAILS.git",
+ {id:"furtails",c:"#ffb3a7",logo:"assets/images/furtails/logo.png",logoBg:"#ffffff",shots:["assets/images/furtails/1.png","assets/images/furtails/2.png","assets/images/furtails/3.png"],ratio:"1400/788",name:"FurTails",type:"Pet Care Website",sum:"One place for pet owners: grooming, personalised meals and pet profiles.",roles:["Developed frontend pages","Integrated APIs to support website functionality"],tech:["HTML","CSS","JavaScript","API Integration","MongoDB"],github:"https://github.com/Joudj7tam/FURTAILS.git",
   overview:"FurTails brings grooming services, personalised feeding plans and custom pet profiles into one website for cat and dog owners. Built by a team of three.",
   problem:"Pet owners juggle separate services for grooming, meals and keeping track of their pets’ care.",
   solution:"Professional grooming packages, meal preparation services, multi-pet profile management and a care history tracker.",
@@ -37,8 +37,8 @@ const PROJECTS=[
 const SKILLS={Programming:["Python","Java","JavaScript","Dart"],"Mobile & Frontend":["Flutter","HTML","CSS"],"Backend & Database":["MySQL","Firebase","MongoDB","Supabase"],"Data Processing":["Data Cleaning","Image Preprocessing"],"Tools & Technologies":["Git","GitHub","JUnit","Figma","API Integration"]};
 const ACH=[
  {n:"Raqeem",e:"Heritage Innovation Hackathon, Jun 2026",s:"2nd Place",b:"",d:["AI-powered heritage platform concept to document and translate Saudi archaeological inscriptions","Built around a unified national database for research and public participation","I conducted market and competitor analysis"]},
- {n:"MindTalker",e:"Global OSH Hackathon, Feb–Mar 2025",s:"AI workplace communication assistant",b:"Prototype",d:["Proposed an AI-powered assistant to improve workplace communication in high-stress situations"]},
- {n:"Baseer",e:"Launchpad Bootcamp Hackathon, Sep 2024",s:"Top 15",b:"Concept",d:["Smart security solution using AI for identity verification and remote access"]},
+ {n:"MindTalker",e:"Global OSH Hackathon, Feb–Mar 2025",s:"AI workplace communication assistant",b:"Prototype",d:["Proposed an AI-powered assistant to improve workplace communication in high-stress situations","Designed to analyze personality patterns and communication styles to provide personalized guidance","Offers real-time conversation analysis, response suggestions, and periodic performance reports"]},
+ {n:"Baseer",e:"Launchpad Bootcamp Hackathon, Sep 2024",s:"Top 15",b:"Concept",d:["Smart security solution using AI for identity verification and remote access","Combines facial recognition with a secure delivery box to prevent package theft","Prioritizes privacy through local data processing and offline functionality"]},
  {n:"Guider",e:"Boussala Hackathon, 2024",s:"AI-powered tourism application",b:"Concept",d:["Smart tour guide for Red Sea visitors with interactive maps","Hotel, restaurant, car and activity booking","Personalised AI recommendations and responsible-tourism guidance"]}];
 const CERT=[["Artificial Intelligence Fundamentals","IBM SkillsBuild","2026"],["UX/UI","Satr, Tuwaiq Academy","2026"],["Build Native Mobile Apps with Flutter","Udacity","2025"],["Overview of IoT Technologies","Huawei CRA Training Program","2024"]];
 /* ================================== */
@@ -55,15 +55,23 @@ function init(){
 const $=s=>document.querySelector(s),RM=matchMedia('(prefers-reduced-motion:reduce)').matches;
 const link=(u,t,c='btn')=>u?`<a class="${c}" href="${u}" target="_blank" rel="noopener">${t}</a>`:`<a class="${c}" aria-disabled="true" title="Add this link in the LINKS settings">${t}</a>`;
 $('#pg').innerHTML=PROJECTS.map(p=>`<a class="card proj rv" href="#${p.id}">${p.logo?`<img class="clogo" src="${p.logo}" alt="">`:''}<span class="tl">${p.type}${p.proto?'<span class="badge">Design prototype</span>':''}</span><h3>${p.name}</h3><p>${p.sum}</p>${p.tech.slice(0,3).map(t=>`<span class="tag">${t}</span>`).join('')}<div class="more">${p.roles.length?`<b>My contributions</b><ul>${p.roles.map(r=>`<li>${r}</li>`).join('')}</ul>`:''}<p style="margin:8px 0 0;color:var(--p);font-weight:600">Open case study</p></div></a>`).join('');
-$('#ach').innerHTML=ACH.map(a=>`<div class="card rv" tabindex="0"><h3>${a.n}${a.b?`<span class="badge">${a.b}</span>`:''}</h3><p>${a.e}</p><span class="tag">${a.s}</span><div class="more"><ul>${a.d.map(x=>`<li>${x}</li>`).join('')}</ul></div></div>`).join('');
-$('#cert').innerHTML=CERT.map(c=>`<div class="card rv"><h3 style="font-size:21px">${c[0]}</h3><p>${c[1]}</p><span class="tag">${c[2]}</span></div>`).join('');
+$('#ach').innerHTML=ACH.map((a,i)=>`<article class="hp rv" tabindex="0"><div class="col"><span class="no">0${i+1}</span><h3>${a.n}</h3></div><div class="ex"><div><span class="tag">${a.s}</span>${a.b?`<span class="badge">${a.b}</span>`:''}</div><div><h3>${a.n}</h3><p>${a.e}</p></div><ul>${a.d.map(x=>`<li>${x}</li>`).join('')}</ul></div></article>`).join('');
+$('#cert').innerHTML=CERT.map(c=>`<div class="cr rv"><span class="yr">${c[2]}</span><div><h3>${c[0]}</h3><p>${c[1]}</p></div></div>`).join('');
 $('#cb').innerHTML=link(LINKS.email&&'mailto:'+LINKS.email,'Email me','btn main')+link(LINKS.linkedin,'LinkedIn')+link(LINKS.github,'GitHub')+link(LINKS.cv,'Download resume');
 if(LINKS.cv){const c=$('#cv');c.href=LINKS.cv;c.target='_blank'}else{$('#cv').setAttribute('aria-disabled','true');$('#cv').title='Add your CV link in LINKS'}
-// skills tabs
-const tabs=$('#tabs');let cur=Object.keys(SKILLS)[0];
-function drawSk(){tabs.innerHTML=Object.keys(SKILLS).map(k=>`<button role="tab" aria-selected="${k==cur}" data-k="${k}">${k}</button>`).join('');
-$('#sk').innerHTML=SKILLS[cur].map(s=>`<div class="card"><h3 style="font-size:22px">${s}</h3></div>`).join('');bindTilt()}
-tabs.onclick=e=>{if(e.target.dataset.k){cur=e.target.dataset.k;drawSk();tabs.querySelector('[aria-selected=true]').focus()}};
+// skills constellation
+function drawSkills(){const ks=Object.keys(SKILLS),el=$('#sk');let ln='',nd='',ls='';
+ ks.forEach((k,i)=>{const t=(-90+i*360/ks.length)*Math.PI/180,hx=50+27*Math.cos(t),hy=50+34*Math.sin(t),m=SKILLS[k].length;
+  ln+=`<line data-g="${i}" x1="50" y1="50" x2="${hx}" y2="${hy}"/>`;nd+=`<button class="hub" data-g="${i}" style="left:${hx}%;top:${hy}%">${k}</button>`;
+  SKILLS[k].forEach((s,j)=>{const d=hx>=50?1:-1,sx=hx+d*12,sy=hy+(j-(m-1)/2)*8;
+   ln+=`<line data-g="${i}" x1="${hx}" y1="${hy}" x2="${sx}" y2="${sy}"/>`;nd+=`<span class="sn${d<0?' l':''}" data-g="${i}" style="left:${sx}%;top:${sy}%;--d:${(i*3+j)*.12}s;--b:${(i+j)*-1.1}s">${s}</span>`});
+  ls+=`<div class="sl rv"><h3>${k}</h3><p>${SKILLS[k].map(s=>`<span>${s}</span>`).join('')}</p></div>`});
+ el.innerHTML=`<div class="sk-map"><svg viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true">${ln}</svg><i class="core"></i>${nd}</div><div class="sk-list">${ls}</div>`;
+ const set=g=>{el.classList.toggle('focus',g!=null);el.querySelectorAll('[data-g]').forEach(x=>x.classList.toggle('on',x.dataset.g===g))};
+ el.addEventListener('pointerover',e=>{const x=e.target.closest('[data-g]');set(x?x.dataset.g:null)});el.addEventListener('pointerleave',()=>set(null));
+ el.addEventListener('focusin',e=>{const x=e.target.closest('[data-g]');set(x?x.dataset.g:null)});el.addEventListener('focusout',()=>set(null))}
+function equalize(){const els=[...document.querySelectorAll('#pg .proj')];els.forEach(e=>e.style.minHeight='');const h=Math.max(...els.map(e=>e.offsetHeight));els.forEach(e=>e.style.minHeight=h+'px')}
+function countUp(){const c=$('[data-count]');if(!c)return;new IntersectionObserver((es,o)=>es.forEach(e=>{if(!e.isIntersecting)return;o.disconnect();const t=+c.dataset.count;if(RM)return;const s=performance.now();(function f(n){const p=Math.min(1,(n-s)/1500);c.textContent=(t*(1-Math.pow(1-p,3))).toFixed(2);if(p<1)requestAnimationFrame(f)})(s)}),{threshold:.4}).observe(c)}
 // case study view
 const cs=$('#case');
 function route(){const id=location.hash.slice(1),i=PROJECTS.findIndex(x=>x.id==id),p=PROJECTS[i];
@@ -80,7 +88,7 @@ function route(){const id=location.hash.slice(1),i=PROJECTS.findIndex(x=>x.id==i
  <div class="ctitle"><span class="tl">${p.type}</span>${p.proto?'<span class="badge">Design prototype, not a built application</span>':''}<h2>${p.name}</h2><p class="csum">${p.sum}</p></div></header>
  <div class="album" tabindex="0" style="--ac:${p.c||'#a78bfa'};--ar:${p.ratio||'9/16'}" aria-label="${p.name} screenshots">${album}</div><p class="hint">Hover or tap the album to spread it out</p>
  <div class="cgrid" style="--ac:${p.c||'#a78bfa'}"><aside class="facts"><h4>Technologies</h4>${p.tech.map(t=>`<span class="tag">${t}</span>`).join('')}${bt?`<h4>Links</h4><div class="btns col">${bt}</div>`:''}</aside><div class="csecs">${secs}</div></div>
- <nav class="cnext" aria-label="More projects"><a href="#${pv.id}"><small>&larr; Previous</small>${pv.name}</a><a href="#${nx.id}"><small>Next &rarr;</small>${nx.name}</a></nav>`;
+ <div class="cnext" role="navigation" aria-label="More projects"><a href="#${pv.id}"><small>&larr; Previous</small>${pv.name}</a><a href="#${nx.id}"><small>Next &rarr;</small>${nx.name}</a></div>`;
  cs.classList.add('on');cs.scrollTop=0;document.title=p.name+' — Shahad Alghamdi';cs.querySelector('a').focus({preventScroll:true})}
  else{cs.classList.remove('on');document.title='Shahad Alghamdi — Software Engineer'}}
 addEventListener('hashchange',route);
@@ -102,11 +110,11 @@ if(!RM)addEventListener('scroll',()=>{const y=scrollY;o1.style.transform=`transl
 // 3D hero
 (function(){const cv=$('#gl');try{
  const R=new THREE.WebGLRenderer({canvas:cv,alpha:true,antialias:true});R.setPixelRatio(Math.min(devicePixelRatio,2));
- const S=new THREE.Scene(),C=new THREE.PerspectiveCamera(40,1,.1,50);C.position.z=4.2;
+ const S=new THREE.Scene(),C=new THREE.PerspectiveCamera(40,1,.1,50);C.position.z=5.2;
  const g=new THREE.SphereGeometry(1.15,96,96),base=g.attributes.position.array.slice();
  const m=new THREE.MeshPhysicalMaterial({color:0xc9b6ff,metalness:.25,roughness:.12,clearcoat:1,clearcoatRoughness:.05,emissive:0x3a2a7a,emissiveIntensity:.25});
  const b=new THREE.Mesh(g,m);S.add(b);
- const ring=new THREE.Mesh(new THREE.TorusGeometry(1.75,.035,24,200),new THREE.MeshPhysicalMaterial({color:0xffb7d5,roughness:.1,clearcoat:1}));ring.rotation.x=1.2;S.add(ring);
+ const ring=new THREE.Mesh(new THREE.TorusGeometry(1.6,.035,24,200),new THREE.MeshPhysicalMaterial({color:0xffb7d5,roughness:.1,clearcoat:1}));ring.rotation.x=1.2;S.add(ring);
  S.add(new THREE.AmbientLight(0xffffff,.65));
  const L1=new THREE.PointLight(0xff9cc7,2.2,20);L1.position.set(3,2,4);const L2=new THREE.PointLight(0x8f7bff,2,20);L2.position.set(-3,-2,3);const L3=new THREE.PointLight(0xffffff,1.6,20);S.add(L1,L2,L3);
  function size(){const w=cv.clientWidth,h=cv.clientHeight;R.setSize(w,h,false);C.aspect=w/h;C.updateProjectionMatrix()}size();addEventListener('resize',size);
@@ -119,6 +127,6 @@ if(!RM)addEventListener('scroll',()=>{const y=scrollY;o1.style.transform=`transl
   L3.position.set(mx*4,-my*3,3);R.render(S,C)}
  if(RM)frame(0);else(function loop(t){requestAnimationFrame(loop);if(vis&&!document.hidden)frame(t)})(0);
 }catch(e){cv.style.cssText+=';background:radial-gradient(circle at 40% 35%,#fff,#c9b6ff 45%,#ff9cc7);border-radius:50%;opacity:.7'}})();
-drawSk();observe();route();
+drawSkills();observe();bindTilt();countUp();equalize();addEventListener("resize",equalize);if(document.fonts)document.fonts.ready.then(equalize);route();
 }
 load();
